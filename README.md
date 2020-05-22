@@ -1,6 +1,5 @@
 # textwrap
-
-TODO: Write a description here
+A simple library to wrap text to a given width.
 
 ## Installation
 
@@ -9,7 +8,7 @@ TODO: Write a description here
    ```yaml
    dependencies:
      textwrap:
-       github: your-github-user/textwrap
+       github: dscottboggs/textwrap
    ```
 
 2. Run `shards install`
@@ -18,17 +17,17 @@ TODO: Write a description here
 
 ```crystal
 require "textwrap"
-```
 
-TODO: Write usage instructions here
+some_long_string.wrap() # returns the wrapped string
+```
 
 ## Development
 
-TODO: Write development instructions here
+Performance and functionality improvements are welcome.
 
 ## Contributing
 
-1. Fork it (<https://github.com/your-github-user/textwrap/fork>)
+1. Fork it (<https://github.com/dscottboggs/textwrap/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -36,4 +35,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [D. Scott Boggs](https://github.com/your-github-user) - creator and maintainer
+- [D. Scott Boggs](https://github.com/dscottboggs) - creator and maintainer
