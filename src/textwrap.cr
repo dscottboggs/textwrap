@@ -2,7 +2,11 @@ require "string_scanner"
 
 class String
   def wrap(width = 80)
-    Textwrap::Scanner.new(self).wrap width
+    Textwrap::Scanner.wrap_text self, width
+  end
+
+  def wrap_paragraph(width = 80)
+    Textwrap::Scanner.new(self).wrap_paragraph width
   end
 
   def zero

@@ -14,6 +14,20 @@ describe Textwrap::Scanner do
   end
 end
 
+describe String do
+  describe "#wrap" do
+    it "wraps some arbitrary text" do
+      LOREM_IPSUM.wrap.should eq WRAPPED_LOREM_IPSUM
+    end
+  end
+  describe "#wrap_paragraph" do
+    it "wraps some text into a single paragraph regardless of line breaks" do
+      "a quick brown\n\tfox jumped over the lazy\n\ndog".wrap_paragraph
+        .should eq "a quick brown fox jumped over the lazy dog"
+    end
+  end
+end
+
 LOREM_IPSUM = <<-HERE
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis, elit nec rhoncus commodo, massa libero tristique tortor, sagittis auctor lectus neque nec arcu. Mauris ultrices interdum interdum. Mauris id tortor a lacus porttitor volutpat eleifend a eros. Nam facilisis sodales ante id tempus. Donec mauris turpis, porta ut enim non, dapibus facilisis ligula. Sed lobortis, leo eu malesuada finibus, felis velit viverra lectus, in fringilla felis ante vitae sapien. Praesent vitae lorem consequat, congue justo quis, tristique arcu. Morbi ac convallis eros, at iaculis sem. Quisque et ultrices diam, ut vulputate neque. In vulputate erat dolor, sit amet volutpat magna vestibulum ut. Nam ut consectetur leo. Donec id tincidunt elit. In non blandit sapien, vitae interdum purus. Ut pulvinar tempor posuere. Nam id ullamcorper ligula. Morbi finibus orci nibh, id laoreet augue sodales et.
 
